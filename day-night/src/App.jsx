@@ -1,26 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-const DayOrNight = () => {
-  sun.classList.toggle('moon')
- container.classList.toggle('night')
-  if (sun.classList.contains('moon') || container.classList.contains('night')) {
-    button.textContent = 'Включить день'
-  } else {
-    button.textContent = 'Включить ночь'
-  }
-}
-
 function App() {
+  const [activeState, setActiveState] = useState(false)
+
+  const DayOrNight = () => {
+    setActiveState(!activeState)
+  }
 
   return (
     <div>
-      <div className="container">
-        <div className="sun"></div>
+      <div
+      onClick={DayOrNight}
+      className={`container ${activeState ? "night" : ""}`}>
+        <div className={`sun ${activeState ? "moon" : ""}`}></div>
       </div>
-      <button onClick={DayOrNight}>Night</button>
+      {/* <button onClick={DayOrNight}>Night</button> */}
     </div>
-  )
+  );
 }
 
 export default App
