@@ -1,0 +1,39 @@
+.container {
+  width: 900px;
+  height: 500px;
+  background-color: rgb(42, 208, 208);
+  margin-left: 320px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.sun {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: yellow;
+  left: 50px;
+  top: 50px;
+  position: absolute;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+button {
+  font-size: 30px;
+  cursor: pointer;
+  height: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.moon {
+  background-color: white;
+}
+
+.night {
+  background-color: blue;
+}
